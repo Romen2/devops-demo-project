@@ -31,7 +31,7 @@ pipeline {
     }
     stage('Build and Push Docker Image') {
       environment {
-        DOCKER_IMAGE = "romen2/demo-java-app:${build_version}"
+        DOCKER_IMAGE = "roro210412/demo-java-app:${build_version}"
         REGISTRY_CREDENTIALS = credentials('dockerhub')
       }
       steps {
@@ -47,7 +47,7 @@ pipeline {
     stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "devops-demo-project"
-            GIT_USER_NAME = "abdelbaki-bouzaienne"
+            GIT_USER_NAME = "Romen2"
         }
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
