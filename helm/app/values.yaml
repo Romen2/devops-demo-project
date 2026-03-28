@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  githubID: Romen2
+  githubID: roro210412
   repository: demo-java-app
   pullPolicy: IfNotPresent
   tag: V1.0
